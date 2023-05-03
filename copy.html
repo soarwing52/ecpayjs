@@ -7,19 +7,19 @@
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="index.js"></script>
   </head>
   <body>
+    <script src="index.js"></script>
     <h1>Payment</h1>
     <form id="data_set" action="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5" method="post">
       <label for="MerchantID">MerchantID : </label>
       <input name="MerchantID" id="MerchantID" value="2000132" />
       <br />
       <label for="MerchantTradeNo">MerchantTradeNo : </label>
-      <input name="MerchantTradeNo" id="MerchantTradeNo" value="NO20230503212535" />
+      <input name="MerchantTradeNo" id="MerchantTradeNo" value="NO20230503220155" />
       <br />
       <label for="MerchantTradeDate">MerchantTradeDate : </label>
-      <input name="MerchantTradeDate" id="MerchantTradeDate" value="2023/05/03 21:25:35" />
+      <input name="MerchantTradeDate" id="MerchantTradeDate" value="2023/05/03 22:01:55" />
       <br />
       <label for="PaymentType">PaymentType : </label>
       <input name="PaymentType" id="PaymentType" value="aio" />
@@ -61,7 +61,7 @@
       <input name="EncryptType" id="EncryptType" value="1" />
       <br />
       <label for="CheckMacValue">CheckMacValue : </label>
-      <input name="CheckMacValue" id="CheckMacValue" value="4047065149B93F2E720447A28D946FBE172621645EDC5213465761817245C379" />
+      <input name="CheckMacValue" id="CheckMacValue" value="A29FD4FA8BBFC1423AF6A9788FC81F07B5027E1B893D2F876557189B0EB83E46" />
       <br /><button type="submit">submit</button>
     </form>
   </body>
