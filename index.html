@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <h1>Payment</h1>
+
+    <form id="data_set" action="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5" method="post">
+      <label for="MerchantID">MerchantID : </label><input name="MerchantID" value="2000132" /><br /><label for="MerchantTradeNo">MerchantTradeNo : </label
+      ><input name="MerchantTradeNo" value="NO20230424211208" /><br /><label for="MerchantTradeDate">MerchantTradeDate : </label
+      ><input name="MerchantTradeDate" value="2023/04/24 21:12:08" /><br /><label for="PaymentType">PaymentType : </label><input name="PaymentType" value="aio" /><br /><label for="TotalAmount"
+        >TotalAmount : </label
+      ><input name="TotalAmount" value="2000" /><br /><label for="TradeDesc">TradeDesc : </label><input name="TradeDesc" value="訂單測試777" /><br /><label for="ItemName">ItemName : </label
+      ><input name="ItemName" value="商品1#商品2888" /><br /><label for="ReturnURL">ReturnURL : </label><input name="ReturnURL" value="https://www.ecpay.com.tw/return_url.php" /><br /><label
+        for="ChoosePayment"
+        >ChoosePayment : </label
+      ><input name="ChoosePayment" value="Credit" /><br /><label for="ClientBackURL">ClientBackURL : </label
+      ><input name="ClientBackURL" value="https://www.ecpay.com.tw/client_back_url.php" /><br /><label for="ItemURL">ItemURL : </label
+      ><input name="ItemURL" value="https://www.ecpay.com.tw/item_url.php" /><br /><label for="Remark">Remark : </label><input name="Remark" value="交易備註" /><br /><label for="OrderResultURL"
+        >OrderResultURL : </label
+      ><input name="OrderResultURL" value="https://www.ecpay.com.tw/order_result_url.php" /><br /><label for="NeedExtraPaidInfo">NeedExtraPaidInfo : </label
+      ><input name="NeedExtraPaidInfo" value="Y" /><br /><label for="InvoiceMark">InvoiceMark : </label><input name="InvoiceMark" value="N" /><br /><label for="EncryptType">EncryptType : </label
+      ><input name="EncryptType" value="1" /><br /><label for="BindingCard">BindingCard : </label><input name="BindingCard" value="0" /><br /><label for="Redeem">Redeem : </label
+      ><input name="Redeem" value="N" /><br /><label for="UnionPay">UnionPay : </label><input name="UnionPay" value="0" /><br /><label for="ExpireDate">ExpireDate : </label
+      ><input name="ExpireDate" value="7" /><br /><label for="PaymentInfoURL">PaymentInfoURL : </label><input name="PaymentInfoURL" value="https://www.ecpay.com.tw/payment_info_url.php" /><br /><label
+        for="ClientRedirectURL"
+        >ClientRedirectURL : </label
+      ><input name="ClientRedirectURL" value="" /><br /><label for="StoreExpireDate">StoreExpireDate : </label><input name="StoreExpireDate" value="15" /><br /><label for="Desc_1">Desc_1 : </label
+      ><input name="Desc_1" value="" /><br /><label for="Desc_2">Desc_2 : </label><input name="Desc_2" value="" /><br /><label for="Desc_3">Desc_3 : </label
+      ><input name="Desc_3" value="" /><br /><label for="Desc_4">Desc_4 : </label><input name="Desc_4" value="" /><br /><label for="CheckMacValue">CheckMacValue : </label
+      ><input name="CheckMacValue" value="99D8129A52CF93CC74CAD6DC70D49272F67625BB4EEE51C8EF98A85F34A4C41F" /><br />
+      <button type="submit">submit</button>
+      <script type="text/javascript"></script>
+    </form>
+    <script type="text/javascript"></script>
+  </body>
+</html>
