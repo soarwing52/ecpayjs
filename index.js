@@ -29,13 +29,15 @@ console.log(dateTimeCode)
 let order_params = {
   MerchantTradeNo: `NO${dateTimeCode}`,
   MerchantTradeDate: `${dateCode} ${timeCode}`,
+  // MerchantTradeNo: "NO20230504163653",
+  // MerchantTradeDate: `2023/05/04 16:36:53`,
   MerchantID: 2000132,
   PaymentType: "aio",
   TotalAmount: 2000,
   TradeDesc: "訂單測試",
   ItemName: "商品1#商品",
   ReturnURL: "https://www.ecpay.com.tw/return_url.php",
-  ChoosePayment: "Credit",
+  ChoosePayment: "ALL",
   ClientBackURL: "https://www.ecpay.com.tw/client_back_url.php",
   ItemURL: "https://www.ecpay.com.tw/item_url.php",
   Remark: "交易備註",
@@ -43,10 +45,16 @@ let order_params = {
   NeedExtraPaidInfo: "Y",
   InvoiceMark: "N",
   EncryptType: 1,
+  PaymentInfoURL: "https://www.ecpay.com.tw/payment_info_url.php",
+  StoreExpireDate: 15,
+  ExpireDate: 7,
+  BindingCard: 0,
+  Redeem: "N",
+  UnionPay: "0",
 }
 
 let keys = Object.keys(order_params).sort()
-console.log(keys)
+console.log(`keys ${keys}`)
 
 let rawCode = `HashKey=${HashKey}`
 keys.forEach((e) => {
@@ -57,13 +65,15 @@ keys.forEach((e) => {
 
 rawCode += `&HashIV=${HashIV}`
 
-console.log(rawCode)
+console.log(`rawCode ${rawCode}`)
 
-let encoded = encodeURI(rawCode)
-console.log(encoded)
+let encoded = encodeURIComponent(rawCode)
+console.log(`encoded ${encoded}`)
 
 let lowered = encoded.toLowerCase()
-console.log(lowered)
+
+lowered = lowered.replace("%20", "+")
+console.log(`lowered ${lowered}`)
 
 const getSHA256Hash = async (input) => {
   const textAsBuffer = new TextEncoder().encode(input)
@@ -75,10 +85,11 @@ const getSHA256Hash = async (input) => {
 
 getSHA256Hash(lowered).then((e) => {
   console.log(e)
+  let uppered = e.toUpperCase()
   console.log(document.getElementById("CheckMacValue"))
   document.getElementById("MerchantTradeNo").value = order_params["MerchantTradeNo"]
   document.getElementById("MerchantTradeDate").value = order_params["MerchantTradeDate"]
   document.getElementById("TradeDesc").value = order_params["TradeDesc"]
   document.getElementById("ItemName").value = order_params["ItemName"]
-  document.getElementById("CheckMacValue").value = e
+  document.getElementById("CheckMacValue").value = uppered
 })

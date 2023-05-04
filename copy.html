@@ -10,59 +10,100 @@
   </head>
   <body>
     <script src="index.js"></script>
-    <h1>Payment</h1>
+    <h1>Form for ECPAY</h1>
     <form id="data_set" action="https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5" method="post">
-      <label for="MerchantID">MerchantID : </label>
-      <input name="MerchantID" id="MerchantID" value="2000132" />
+      <label for="MerchantID">MerchantID:</label>
+      <input name="MerchantID" value="2000132" />
       <br />
-      <label for="MerchantTradeNo">MerchantTradeNo : </label>
-      <input name="MerchantTradeNo" id="MerchantTradeNo" value="NO20230503220155" />
+
+      <label for="MerchantTradeNo">MerchantTradeNo:</label>
+      <input name="MerchantTradeNo" value="NO20230504163653" />
       <br />
-      <label for="MerchantTradeDate">MerchantTradeDate : </label>
-      <input name="MerchantTradeDate" id="MerchantTradeDate" value="2023/05/03 22:01:55" />
+
+      <label for="MerchantTradeDate">MerchantTradeDate:</label>
+      <input name="MerchantTradeDate" value="2023/05/04 16:36:53" />
       <br />
-      <label for="PaymentType">PaymentType : </label>
-      <input name="PaymentType" id="PaymentType" value="aio" />
+
+      <label for="PaymentType">PaymentType:</label>
+      <input name="PaymentType" value="aio" />
       <br />
-      <label for="TotalAmount">TotalAmount : </label>
-      <input name="TotalAmount" id="TotalAmount" value="2000" />
+
+      <label for="TotalAmount">TotalAmount:</label>
+      <input name="TotalAmount" value="2000" />
       <br />
-      <label for="TradeDesc">TradeDesc : </label>
-      <input name="TradeDesc" id="TradeDesc" value="訂單測試777" />
+
+      <label for="TradeDesc">TradeDesc:</label>
+      <input name="TradeDesc" value="訂單測試" />
       <br />
-      <label for="ItemName">ItemName : </label>
-      <input name="ItemName" id="ItemName" value="商品1#商品2888" />
+
+      <label for="ItemName">ItemName:</label>
+      <input name="ItemName" value="商品1#商品" />
       <br />
-      <label for="ReturnURL">ReturnURL : </label>
-      <input name="ReturnURL" id="ReturnURL" value="https://www.ecpay.com.tw/return_url.php" />
+
+      <label for="ReturnURL">ReturnURL:</label>
+      <input name="ReturnURL" value="https://www.ecpay.com.tw/return_url.php" />
       <br />
-      <label for="ChoosePayment">ChoosePayment : </label>
-      <input name="ChoosePayment" id="ChoosePayment" value="Credit" />
+
+      <label for="ChoosePayment">ChoosePayment:</label>
+      <input name="ChoosePayment" value="ALL" />
       <br />
-      <label for="ClientBackURL">ClientBackURL : </label>
-      <input name="ClientBackURL" id="ClientBackURL" value="https://www.ecpay.com.tw/client_back_url.php" />
+
+      <label for="ClientBackURL">ClientBackURL:</label>
+      <input name="ClientBackURL" value="https://www.ecpay.com.tw/client_back_url.php" />
       <br />
-      <label for="ItemURL">ItemURL : </label>
-      <input name="ItemURL" id="ItemURL" value="https://www.ecpay.com.tw/item_url.php" />
+
+      <label for="ItemURL">ItemURL:</label>
+      <input name="ItemURL" value="https://www.ecpay.com.tw/item_url.php" />
       <br />
-      <label for="Remark">Remark : </label>
-      <input name="Remark" id="Remark" value="交易備註" />
+
+      <label for="Remark">Remark:</label>
+      <input name="Remark" value="交易備註" />
       <br />
-      <label for="OrderResultURL">OrderResultURL : </label>
-      <input name="OrderResultURL" id="OrderResultURL" value="https://www.ecpay.com.tw/order_result_url.php" />
+
+      <label for="OrderResultURL">OrderResultURL:</label>
+      <input name="OrderResultURL" value="https://www.ecpay.com.tw/order_result_url.php" />
       <br />
-      <label for="NeedExtraPaidInfo">NeedExtraPaidInfo : </label>
-      <input name="NeedExtraPaidInfo" id="NeedExtraPaidInfo" value="Y" />
+
+      <label for="NeedExtraPaidInfo">NeedExtraPaidInfo:</label>
+      <input name="NeedExtraPaidInfo" value="Y" />
       <br />
-      <label for="InvoiceMark">InvoiceMark : </label>
-      <input name="InvoiceMark" id="InvoiceMark" value="N" />
+
+      <label for="InvoiceMark">InvoiceMark:</label>
+      <input name="InvoiceMark" value="N" />
       <br />
-      <label for="EncryptType">EncryptType : </label>
-      <input name="EncryptType" id="EncryptType" value="1" />
+
+      <label for="EncryptType">EncryptType:</label>
+      <input name="EncryptType" value="1" />
       <br />
-      <label for="CheckMacValue">CheckMacValue : </label>
-      <input name="CheckMacValue" id="CheckMacValue" value="A29FD4FA8BBFC1423AF6A9788FC81F07B5027E1B893D2F876557189B0EB83E46" />
-      <br /><button type="submit">submit</button>
+
+      <label for="ExpireDate">ExpireDate:</label>
+      <input name="ExpireDate" value="7" />
+      <br />
+
+      <label for="PaymentInfoURL">PaymentInfoURL:</label>
+      <input name="PaymentInfoURL" value="https://www.ecpay.com.tw/payment_info_url.php" />
+      <br />
+
+      <label for="StoreExpireDate">StoreExpireDate:</label>
+      <input name="StoreExpireDate" value="15" />
+      <br />
+
+      <label for="BindingCard">BindingCard:</label>
+      <input name="BindingCard" value="0" />
+      <br />
+
+      <label for="Redeem">Redeem:</label>
+      <input name="Redeem" value="N" />
+      <br />
+
+      <label for="UnionPay">UnionPay:</label>
+      <input name="UnionPay" value="0" />
+      <br />
+
+      <label for="CheckMacValue">CheckMacValue:</label>
+      <input name="CheckMacValue" value="9F9C9C6B1D552627C437599519D73DEAF96252308EF57D333CA86731782571AB" />
+      <br />
+      <button type="submit">submit</button>
     </form>
   </body>
 </html>
