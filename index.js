@@ -83,13 +83,19 @@ const getSHA256Hash = async (input) => {
   return hash
 }
 
-getSHA256Hash(lowered).then((e) => {
-  console.log(e)
-  let uppered = e.toUpperCase()
-  console.log(document.getElementById("CheckMacValue"))
-  document.getElementById("MerchantTradeNo").value = order_params["MerchantTradeNo"]
-  document.getElementById("MerchantTradeDate").value = order_params["MerchantTradeDate"]
-  document.getElementById("TradeDesc").value = order_params["TradeDesc"]
-  document.getElementById("ItemName").value = order_params["ItemName"]
-  document.getElementById("CheckMacValue").value = uppered
-})
+// getSHA256Hash(lowered).then((e) => {
+//   console.log(e)
+//   let uppered = e.toUpperCase()
+//   console.log(document.getElementById("CheckMacValue"))
+//   document.getElementById("MerchantTradeNo").value = order_params["MerchantTradeNo"]
+//   document.getElementById("MerchantTradeDate").value = order_params["MerchantTradeDate"]
+//   document.getElementById("TradeDesc").value = order_params["TradeDesc"]
+//   document.getElementById("ItemName").value = order_params["ItemName"]
+//   document.getElementById("CheckMacValue").value = uppered
+// })
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+sleep(1000)
